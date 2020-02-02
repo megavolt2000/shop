@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Uncial+Antiqua&display=swap');
+
+h1, h2, p, section, header, main,
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+header nav .logo,
+header section h1 {
+    font-family: 'Uncial Antiqua', cursive; /*шрифт @import для класу logo та секції*/
+    font-size: 3.5rem; /*розмір шрифта*/
+    text-transform: uppercase; /*всі вуликі букви*/
+    text-align: center; /*відцентрувати текст*/
+}
+
+header nav .menu {
+    display: flex; /*розміщення в рядок li в класі menu*/
+    flex: 1; /*елементи тега menu розтягуються на всю ширину при @media (min-width: 800px)*/
+    padding: 0; /*відступ до лівого краю*/
+    list-style-type: none; /*забрати точки*/
+    justify-content: space-around; /*рівномірно розтягнути елементи menu*/
+}
