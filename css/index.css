@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway|Uncial+Antiqua&display=swap');
 
+:root { /*псевдоклас який відповідає самому верхньому тегу html*/
+    --main-color: #201d1d; /*оголушуєм змінні колір*/
+    font-family: 'Raleway', sans-serif; /*задаєм шрифт для тегу html на рівні root*/
+    scroll-behavior: smooth; /*плавний скрол по сайту  */
+}
+
+body {
+    max-width: 980px; /*ширина тегу body*/
+    margin: auto;
+}
+
 h1, h2, p, section, header, main,
 footer {
     margin: 0;
@@ -9,7 +20,7 @@ footer {
 header nav .logo,
 header section h1 {
     font-family: 'Uncial Antiqua', cursive; /*шрифт @import для класу logo та секції*/
-    font-size: 3.5rem; /*розмір шрифта*/
+    font-size: 3rem; /*розмір шрифта*/
     text-transform: uppercase; /*всі вуликі букви*/
     text-align: center; /*відцентрувати текст*/
 }
@@ -20,4 +31,55 @@ header nav .menu {
     padding: 0; /*відступ до лівого краю*/
     list-style-type: none; /*забрати точки*/
     justify-content: space-around; /*рівномірно розтягнути елементи menu*/
+}
+
+header nav .menu a { /*селектор з тегом "а"*/
+    text-transform: uppercase;
+    text-decoration: none; /*забрати підкреслення*/
+    color: var(--main-color); /*використовуєм змінну з кольором*/
+    border: 1px solid transparent; /*малюєм прозору рамочку для елементів menu*/
+    padding: 5px;
+}
+
+header nav .menu a:hover { /*селектор з тегом "а" коли мишка рухається по елементах menu - то навколо елементів menu малюється рамочка*/
+    border: 1px solid var(--main-color);
+}
+
+@media (min-width: 800px) {/* у фігурних дужках css код спрацює тільки тоді, коли мінімальна ширина браузера стане 800px*/
+    header nav {
+        display: flex; /*дочірні елементи у тега nav стануть флекса-елементами, і флекс поставить їх один біля одного*/
+        align-items: center; /*елементи menu вирівняти по вертикалі*/
+    }
+} 
+
+header section {
+    background-image: url(../images/QP.jpg); /*фон для header section*/
+    min-height: 400px; /*400рх мінімальна висота*/
+    background-size: cover; /**/
+    
+    display: flex;
+    align-items: center; /*по центрі елементи*/
+    justify-content: center; /*по центрі елементи*/
+    flex-direction: column; /* в стовбчик елементи*/
+}
+
+.button {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.3s;
+    background-color: transparent;
+}
+
+.button:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    cursor: pointer;
 }
