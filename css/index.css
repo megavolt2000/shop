@@ -25,6 +25,10 @@ header section h1 {
     text-align: center;
 }
 
+main h2 {
+    text-align: center;
+}
+
 header nav .menu {
     display: flex;
     flex: 1;
